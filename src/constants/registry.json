@@ -1,0 +1,131 @@
+{
+  "digital-twin": {
+    "suite": "Digital Twin",
+    "family": "Web3D",
+    "product": "pbc",
+    "name": "Test DT",
+    "version": "1.0.0",
+    "registry": {
+      "webapp": "localhost",
+      "swagger": "localhost/api"
+    },
+    "poweredBy": "@ Powered by Vicomtech",
+    "entrypoint": "digital_twin:8071",
+    "backend": {
+      "version": "1.0.0",
+      "url": "http://localhost/api"
+    },
+    "authenticationMethods": [
+      "email"
+    ],
+    "headers": {
+      "firstLogo": "/static/logos/vicomtech.svg"
+    },
+    "about": [],
+    "groups": [
+      {
+        "id": "data-services",
+        "label": "Micro-Services",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "style": {
+          "backgroundColor": "#52AFBE40",
+          "width": 300,
+          "height": 700
+        }
+      },
+      {
+        "id": "integration",
+        "label": "Integration",
+        "position": {
+          "x": 310,
+          "y": 0
+        },
+        "style": {
+          "backgroundColor": "#CCDC5840",
+          "width": 300,
+          "height": 700
+        }
+      },
+      {
+        "id": "intelligence",
+        "label": "Intelligence",
+        "position": {
+          "x": 620,
+          "y": 0
+        },
+        "style": {
+          "backgroundColor": "#CCDC5840",
+          "width": 300,
+          "height": 700
+        }
+      },
+      {
+        "id": "ux",
+        "label": "UX",
+        "position": {
+          "x": 930,
+          "y": 0
+        },
+        "style": {
+          "backgroundColor": "#CCDC5840",
+          "width": 300,
+          "height": 700
+        }
+      },
+      {
+        "id": "apps",
+        "label": "Digital Twins",
+        "position": {
+          "x": 1240,
+          "y": 0
+        },
+        "style": {
+          "backgroundColor": "#CCDC5840",
+          "width": 300,
+          "height": 700
+        }
+      },
+      {
+        "id": "trustworthiness",
+        "label": "Trustworthiness",
+        "position": {
+          "x": 1550,
+          "y": 0
+        },
+        "style": {
+          "backgroundColor": "#52AFBE40",
+          "width": 300,
+          "height": 700
+        }
+      }
+    ],
+    "modules": [
+      {
+        "name": "dtmModule",
+        "build": true
+      }
+    ],
+    "releaseId": "web3d"
+  },
+  "dtmModule": {
+    "type": "microfrontend",
+    "label": "Digital Twin PBC",
+    "enableProxy": true,
+    "configureProxy": true,
+    "proxyPath": "/",
+    "dockerContainer": "digital-twin",
+    "rootDir": "./Digital-Twin",
+    "servicesMap": {
+      "group": "apps"
+    },
+    "dependencies": [],
+    "devServerPort": 8071,
+    "endpoint": "remote.js",
+    "remote": "http:://localhost/remote.js",
+    "url": "http:://localhost/",
+    "licenses": []
+  }
+}
